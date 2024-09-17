@@ -4,7 +4,8 @@
   "description": "site pra hospedar mangas de todo o mundo e plorifera a cultura dos animes",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "keywords": [
     "manga",
