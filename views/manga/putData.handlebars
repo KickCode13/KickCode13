@@ -1,0 +1,163 @@
+<div class="container d-flex justify-content-center">
+  <div class="card mb-3">
+    <img
+      src="{{manga.dataValues.coverImage}}"
+      class="card-img-top rounded-pill"
+      alt="..."
+    />
+    <div class="card-body">
+      <form id="edit-manga-form" data-id="{{manga.dataValues.id}}">
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Endereço da
+            imagem:</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="coverImage"
+            id="coverImage"
+            value="{{manga.dataValues.coverImage}}"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span
+            class="input-group-text"
+            id="inputGroup-sizing-sm"
+          >Titulo:</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="title"
+            id="title"
+            value="{{manga.dataValues.title}}"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Genero</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="genre"
+            id="genre"
+            value="{{manga.dataValues.genre}}"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Idioma</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="language"
+            id="language"
+            value="{{manga.dataValues.language}}"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span
+            class="input-group-text"
+            id="inputGroup-sizing-sm"
+          >Editora</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="publisher"
+            id="publisher"
+            value="{{manga.dataValues.publisher}}"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Data de
+            lançamento</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="publicationDate"
+            id="publicationDate"
+            value="{{manga.dataValues.publicationDate}}"
+            type="date"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-text">Descrição</span>
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            name="description"
+            id="description"
+            required
+          >{{manga.dataValues.description}}</textarea>
+        </div>
+
+        <hr />
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Autor</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="author"
+            id="author"
+            value="{{manga.dataValues.author}}"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Status</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="status"
+            id="status"
+            value="{{manga.dataValues.status}}"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Link do site</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="linkAnime"
+            id="linkAnime"
+            value="{{manga.dataValues.linkAnime}}"
+            required
+          />
+        </div>
+
+        <button
+          id="btn-edit"
+          class="btn btn-danger"
+          type="submit"
+        >Salvar</button>
+        <a href="/" class="btn btn-dark">Voltar</a>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+<script src="/js/fetchPut.js"></script>

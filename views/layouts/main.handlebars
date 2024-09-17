@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick Manga</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/img/icon2.webp" type="image/x-icon">
+    
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <div class="container-fluid">
+          <div class="nav-item" id="div-img">
+            <img src="/img/icon2.webp" alt="" width="30" height="24" id="icon">
+          </div>&nbsp;
+          <a class="navbar-brand" href="/">Kick Manga</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Generos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdown-menu-id">
+                  <li><a class="dropdown-item genre" href="#">Ação</a></li>
+                  <li><a class="dropdown-item genre" href="#">Drama</a></li>
+                  <li><a class="dropdown-item genre" href="#">Ficção Científica</a></li>
+                  <li><a class="dropdown-item genre" href="#">Suspense</a></li>
+                  <li><a class="dropdown-item genre" href="#">Shounen</a></li>
+                  <li><a class="dropdown-item genre" href="#">Shoujo</a></li>
+                  <li><a class="dropdown-item genre" href="#">Shounen Ai</a></li>
+                  <li><a class="dropdown-item genre" href="#">One Shot</a></li>
+                  <li><a class="dropdown-item genre" href="#">Idol</a></li>
+                  <li><a class="dropdown-item genre" href="#">Isekai</a></li>
+                  <li><a class="dropdown-item genre" href="#">Kodomomuke</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item genre" href="#">Yaoi</a></li>
+                  <li><a class="dropdown-item genre" href="#">Ecchi</a></li>
+                  <li><a class="dropdown-item genre" href="#">Harem</a></li>
+                  <li><a class="dropdown-item genre" href="#">Yuri</a></li>
+                  <li><a class="dropdown-item genre" href="#">Josei</a></li>
+                  <li><a class="dropdown-item genre" href="#">Seinen</a></li>
+                  <li><a class="dropdown-item genre" href="#">Reverse Harem</a></li>
+                  
+
+                </ul>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        {{#if adminAcess}}
+          <div class="nav-item">
+              
+              <div class="dropdown">
+                <button id="btn-dropdown" class="btn btn-danger dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false" title="{{userLog}}">
+                  <img src="/img/admin.png" alt="btn-admin-acess" >
+                  Modo Admin
+                </button>
+                <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1"> {{!- quando aperta no bug de direcionar cmo genero ele volta a ter register e login, provavel que não teja verificando}}
+                  <form action="/manga/logout" method="POST" class="dropdown-item-profile">
+                    <button type="submit" class="dropdown-item" >Logout</button>
+                  </form>
+                </ul>
+              </div>
+          </div>
+        {{/if}}
+        {{#if userLog}}
+          <div class="nav-item">
+              
+              <div class="dropdown">
+                <button id="btn-dropdown" class="btn btn-danger dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false" title="{{userLog}}">
+                  <img src="/img/user.png" alt="" >
+                  {{userLogName}}
+                </button>
+                <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1"> {{!- quando aperta no bug de direcionar cmo genero ele volta a ter register e login, provavel que não teja verificando}}
+                  <li><a class="dropdown-item" href="/user/save">Salvos</a></li>
+                  <form action="/user/logout" method="POST" class="dropdown-item-profile">
+                    <button type="submit" class="dropdown-item" >Logout</button>
+                  </form>
+                </ul>
+              </div>
+          </div>
+        {{else}}
+          <div class="nav-item ">
+            <a href="/user/login" class="btn btn-outline-secondary btn-all-form">
+              Login
+            </a>
+          </div>
+          <div class="nav-item">
+            <a href="/user/register" class="btn btn-outline-secondary btn-all-form">
+              Register
+            </a>
+          </div>
+        {{/if}}
+        {{#if adminAcess}}
+        <div class="nav-item">
+          <a href="/manga/add" class="btn btn-outline-secondary btn-all-form">
+           <img src="/img/add-icon.png" alt="" >
+          </a>
+        </div>
+        {{/if}}
+        
+      </nav>
+      {{{body}}}
+      <div id="footer-div">
+        <hr>
+        <footer id="footer">
+          <p>Contact Me</p>
+          +55 87 9999-5722
+        </footer>
+      </div>
+     
+    <script src="/js/dropdownHandler.js">
+     
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+   
+   
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+ <div class="image-container" id="image-div-background">
+        <img src="/img/background.jpg" alt="Background Image"  class="img-fluid">
+        <p class="image-credit">Imagem de <a href="https://br.freepik.com/fotos-gratis/ilustracao-de-cena-de-halloween-em-estilo-anime_299795219.htm#query=anime&position=27&from_view=keyword&track=ais_hybrid&uuid=7d21876b-12ca-45a5-9733-d4a6e4fef73e">Freepik</a>[Imagem usada sob licença gratuita. Caso o link de crédito não funcione, visite o Freepik diretamente para mais informações]</p>
+        
+        <form class="search-bar" method="get" action="/manga/search">
+            <div class="input-group" id="div-search-input-button">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search" name="search" id="search">
+                <button class="btn btn-outline-success btn-all-form" type="submit" >Search</button>
+            </div>
+        </form>
+        <hr>
+</div>
+
+{{#if search}}
+  <div class="div-search badge badge-light"><span  name="search" class="search-badge" title="{{search}}" style="background-color: blueviolet; font-size: 20px;">Filtrando por: {{search}}</span></div>
+{{/if}}
+{{#if genreReq}}
+  <div class="div-search badge badge-light"><span name="search" class="search-badge" title="{{search}}" style="background-color: blueviolet; font-size: 20px;">Genero: {{genreReq}}</span></div>
+{{/if}}
+{{#if savesMangas}}
+  <h1 class="badge badge-light" style="background-color: blueviolet; font-size: 20px;">Mangas Salvos</h1> 
+{{/if}}
+ 
+<div class="row">
+  
+    {{#each mangas}}
+    
+    <div class="col-md-4 mb-4" id="card-home-manga">
+        <div class="card" style="width: 18rem; position: relative;">
+          <img src="{{dataValues.coverImage}}" class="card-img-top" alt="...">
+            {{#if ../userLog}}
+              <form action="/user/save/{{dataValues.id}}" method="post">
+                <button id="btn-save-{{dataValues.id}}" class="btn" style="position: absolute; top: 10px; left: 10px;" title="salve manga" type="submit">
+                   
+                  
+                  <img class="save-img" src="/img/{{dataValues.mangaSaved}}" alt="btn-save">
+                  
+                  </button>
+                  
+
+              </form>
+               
+            {{/if}}
+          <div class="card-body" >
+            <h5 class="card-title">{{dataValues.title}}</h5>
+            <p class="card-text">{{dataValues.description}}</p>
+            <div class="div-btn-read-info">
+              <a href="{{dataValues.linkAnime}}" class="btn btn-in-card-read btn-read" >Ler
+                <img src="/img/read.png" alt="ler">
+              </a>
+              <a href="/manga/views/{{dataValues.id}}" class="btn btn-in-card-info btn-detail"
+              >Info<img src="/img/book-info.png" alt="btn-book-info"></a>
+            </div>
+          
+            {{#if ../adminAcess}}
+             
+              <div class="btn-admin-home btn-admin">
+                 
+                <a id="btn-edit-{{dataValues.id}}" class="btn btn-danger btn-home" href="/manga/edit/{{dataValues.id}}"><img src="/img/edit-icon.png" alt=""></a>{{!-- redirecina pra rota get do put--}}
+                <button id="btn-del-{{dataValues.id}}" class="btn btn-danger btn-home btn-del" data-id="{{dataValues.id}}"><img src="/img/delete-icon.png" alt=""></button>
+                
+              </div>
+                     
+            {{/if}}
+           
+          </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<script src="/js/fetchDelete.js">
+
+</script>
+
+{{#if mangaSalve}}
+<script>
+  let msgSaveManga = "Manga Salvo"
+</script>
+<script src="/js/mangaSave.js">
+</script>
+{{/if}}
+
+
+

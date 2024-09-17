@@ -1,0 +1,321 @@
+.search-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+.image-container {
+  position: relative;
+  text-align: center;
+}
+#navbar {
+  background-color: #e60b00 !important;
+}
+.nav-link {
+  color: white;
+}
+.navbar-brand {
+  color: white;
+  margin-right: 5px;
+  font-family: "Courier New", Courier, monospace;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; /* Sombra para todos os lados, criando o efeito de contorno */
+}
+.navbar-brand:hover {
+  color: white;
+}
+.btn {
+  color: white;
+}
+.btn-outline-success {
+  border-color: white; /* Cor personalizada da borda */
+  color: white;
+}
+.btn-outline-success:hover {
+  border-color: rgb(82, 0, 0); /* Cor personalizada da borda */
+  color: white;
+  background-color: red;
+}
+.btn-outline-success:active {
+  background-color: red !important;
+  color: red !important;
+  border-color: red !important;
+}
+body {
+  background-color: rgb(206, 3, 3);
+}
+.nav-item {
+  margin-right: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.btn-outline-secondary {
+  border-color: white; /* Cor personalizada da borda */
+  color: white;
+  margin-top: 2px;
+  float: left;
+}
+.card {
+  background-color: rgb(247, 128, 128);
+  width: 40%;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-badge {
+  display: block; /* Ocupar toda a largura do contêiner pai */
+  max-width: 100%; /* Limitar a largura ao contêiner pai */
+  white-space: nowrap; /* Impedir a quebra de linha */
+  overflow: hidden; /* Ocultar o conteúdo que excede a largura */
+  text-overflow: ellipsis; /* Adicionar reticências ao texto que excede a largura */
+  padding: 0.25em 0.5em; /* Adicionar preenchimento para melhor aparência */
+  background-color: #6c757d; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  border-radius: 0.25rem; /* Bordas arredondadas */
+}
+.div-search {
+  max-width: 200px; /* Define a largura máxima para o contêiner */
+}
+#btn-admin {
+  margin-top: 10px;
+}
+#btn-edit {
+  background-color: #db0064;
+}
+.btn-del {
+  background-color: #db0900;
+}
+.btn-read {
+  background-color: #db4d00;
+}
+.btn-read:hover {
+  background-color: rgb(209, 68, 209) !important;
+}
+.btn-detail {
+  background-color: #db9200;
+}
+.btn-detail:hover {
+  background-color: rgb(209, 68, 209) !important;
+}
+.btn-back {
+  background-color: #db9200;
+}
+.btn-back:hover {
+  background-color: rgb(209, 68, 209) !important;
+}
+.login-form-div {
+  width: 200%;
+  max-width: 400px; /* Define uma largura máxima para não esticar demais */
+  margin: 10px 0;
+  /* Espaçamento entre os elementos */
+}
+.login-form {
+  width: 100%;
+  max-width: 400px; /* Define uma largura máxima para o formulário */
+  margin: 0 auto; /* Centraliza o formulário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 244px;
+}
+#btn-dropdown {
+  background-color: #e6003b;
+}
+#footer-div {
+  background-color: #ff0106;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: white;
+}
+#image-div-background {
+  background-color: #ff0106;
+}
+#card-home-manga .card {
+  height: 500px; /* Define a altura fixa para o card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+}
+.admin #card-home-manga .card {
+  height: 600px; /* Define a altura fixa para o card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+}
+
+#card-home-manga .card-img-top {
+  height: 300px; /* Define a altura da imagem */
+  object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorção */
+}
+
+#card-home-manga .card-text {
+  height: calc(1.2em * 3); /* Define a altura para 5 linhas de texto */
+  max-height: calc(1.2em * 5); /* Garante que o texto não ultrapasse 5 linhas */
+  overflow: hidden; /* Esconde o texto extra */
+  text-overflow: ellipsis; /* Adiciona "..." no final do texto que ultrapassar */
+  line-height: 1.2em; /* Define a altura da linha */
+}
+#card-home-manga .card-title {
+  height: calc(1.2em * 1); /* Define a altura para 1 linhas de texto */
+  max-height: calc(1.2em * 5); /* Garante que o texto não ultrapasse 5 linhas */
+  overflow: hidden; /* Esconde o texto extra */
+  text-overflow: ellipsis; /* Adiciona "..." no final do texto que ultrapassar */
+  line-height: 1.2em; /* Define a altura da linha */
+}
+#space-to-fill {
+  height: 380px;
+}
+.btn-in-card-read {
+  position: absolute;
+  bottom: -50px; /* Ajuste conforme necessário */
+  left: 10px; /* Ajuste conforme necessário */
+  z-index: 10; /* Garante que o botão fique acima de outros conteúdos */
+  /* Adicione estilos adicionais conforme necessário */
+}
+.btn-in-card-info {
+  position: absolute;
+  bottom: -50px; /* Ajuste conforme necessário */
+  right: 10px; /* Ajuste conforme necessário */
+  z-index: 10; /* Garante que o botão fique acima de outros conteúdos */
+  /* Adicione estilos adicionais conforme necessário */
+}
+.btn-all-form {
+  background-color: #ff1908;
+  border-color: #000000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; /* Sombra para todos os lados, criando o efeito de contorno */
+}
+
+.btn-all-form:hover {
+  background-color: #ff0b00;
+  border-color: white;
+}
+#navbarDropdown {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; /* Sombra para todos os lados, criando o efeito de contorno */
+}
+#navbarDropdown:hover {
+  color: white;
+}
+#btn-admin {
+  display: flex; /* Alinha os itens em uma linha */
+  gap: 10px; /* Espaço entre os botões */
+}
+
+.btn-admin a,
+.btn-admin form {
+  display: inline-block; /* Certifica-se de que o link e o formulário sejam exibidos como blocos em linha */
+  margin: 0; /* Remove qualquer margem adicional */
+}
+#div-search-input-button {
+  border: 2px solid black;
+  border-radius: 7px;
+}
+#search:focus {
+  border: 2px solid rgb(255, 255, 255); /* Adiciona uma borda azul ao redor do input quando em foco */
+  box-shadow: 0 0 0 2px rgba(5, 5, 5, 0.3);
+}
+.div-btn-read-info {
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centraliza os elementos horizontalmente */
+  gap: 60px;
+  transform: scale(1.2);
+}
+.btn-admin {
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centraliza os elementos horizontalmente */
+  gap: 150px;
+  margin-top: 15px;
+}
+#btn-watch-back {
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centraliza os elementos horizontalmente */
+  gap: 20px;
+  margin-top: 15px;
+  transform: scale(1.5);
+  margin-left: 25px;
+}
+.btn-manga-info-admin {
+  display: flex;
+  /* Centraliza os elementos horizontalmente */
+  margin-right: 30px;
+  transform: scale(1.3);
+}
+
+/* Certifique-se de que o contêiner tenha position: relative */
+.btn-manga-info-admin {
+  position: relative;
+  padding: 20px; /* Ajuste o padding conforme necessário */
+}
+
+/* Posicionando o botão "Editar" no canto inferior direito */
+.btn-edit-info {
+  position: absolute;
+  bottom: 10px; /* Ajuste a distância da parte inferior */
+  right: 18px; /* Ajuste a distância da lateral direita */
+  margin-right: 10px;
+}
+.btn-del-info {
+  position: absolute;
+  bottom: 10px; /* Ajuste a distância da parte inferior */
+  right: 18px; /* Ajuste a distância da lateral direita */
+  margin-right: -70px;
+}
+.btn-home {
+  margin-left: 30px;
+}
+#space-to-login {
+  height: 120px;
+}
+
+.btn-admin-home {
+  position: absolute;
+  top: -5px; /* Distância do topo do card */
+  right: 10px; /* Distância da lateral direita do card */
+  display: flex;
+  flex-direction: column; /* Organiza os botões em coluna */
+  gap: 10px; /* Espaço entre os botões */
+  z-index: 10; /* Garante que os botões fiquem acima de outros conteúdos */
+}
+.btn-del-home-form {
+  position: absolute;
+  top: 255px; /* Distância do topo do card */
+  right: -1px; /* Distância da lateral direita do card */
+  display: flex;
+  flex-direction: column; /* Organiza os botões em coluna */
+  gap: 10px; /* Espaço entre os botões */
+  z-index: 10;
+}
+
+.btn-manga-info-admin {
+  /*serve pro os botões do manga info */
+  position: absolute;
+  top: 20px; /* Distância do topo do card */
+  right: 60px; /* Distância da lateral esquerda do card */
+  display: flex;
+  flex-direction: column; /* Organiza os botões em coluna */
+  gap: 10px; /* Espaço entre os botões */
+  z-index: 10; /* Garante que os botões fiquem acima de outros conteúdos */
+}
+
+.error-404 {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 500px;
+}

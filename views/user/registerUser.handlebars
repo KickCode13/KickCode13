@@ -1,0 +1,58 @@
+<div class="login-form">
+  <h1>Register</h1>
+  <form method="post" action="/user/register">
+    <div class="mb-3 form-group login-form-div">
+      Nome<input
+        type="text"
+        class="form-control"
+        id="idRegister"
+        name="nameRegister"
+        required
+      />
+    </div>
+    <div class="mb-3 form-group login-form-div">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="emailRegister"
+        name="emailRegister"
+        aria-describedby="emailHelp"
+        required
+      />
+      <div id="emailHelp" class="form-text">We'll never share your email with
+        anyone else.</div>
+    </div>
+    <div class="mb-3 login-form-div">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="passwordRegister"
+        name="passwordRegister"
+        required
+      />
+      {{! Tava mudando os ids e names(rotas ja tão funcionando as get, agora falta os post e resgitro no banco}}
+    </div>
+    <div class="mb-3 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="exampleCheck1"
+        required
+      />
+      <label class="form-check-label" for="exampleCheck1">Aceito os termos de
+        uso</label>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary btn-all-form"
+    >Registra-se</button>
+  </form>
+</div>
+{{#if isUserExists}}
+  <script>
+    let msgIsUserExists = "Usuario ja Registrado!!!!";
+  </script>
+  <script src="/js/isUserExistsMsg.js"></script>
+{{/if}}

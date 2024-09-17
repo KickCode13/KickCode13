@@ -1,0 +1,141 @@
+<div class="container d-flex justify-content-center">
+  <div class="card mb-3">
+    <img src="/img/carnival.jpg" class="card-img-top rounded-pill" alt="..." />
+    <div class="card-body">
+      <form action="/manga/add" method="POST">
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Endereço da imagem:</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="coverImage"
+            id="coverImage"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Titulo:</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="title"
+            id="title"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Genero</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="genre"
+            id="genre"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Idioma</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="language"
+            id="language"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Editora</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="publisher"
+            id="publisher"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Data de lançamento</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="publicationDate"
+            id="publicationDate"
+            type="date"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-text">Descrição</span>
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            name="description"
+            id="description"
+            required
+          ></textarea>
+        </div>
+
+        <hr />
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Autor</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="author"
+            id="author"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Status</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="status"
+            id="status"
+            required
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Link do site</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            name="linkAnime"
+            id="linkAnime"
+            required
+          />
+        </div>
+
+        <button
+          id="btn-edit"
+          class="btn btn-danger"
+          type="submit"
+        >Salvar</button>
+        <a href="/" class="btn btn-dark">Voltar</a>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>

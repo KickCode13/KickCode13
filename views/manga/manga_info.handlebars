@@ -1,0 +1,38 @@
+<div class="container d-flex justify-content-center">
+  <div class="card mb-3" id="card-manga">
+    <img src="{{manga.dataValues.coverImage}}" class="card-img-top rounded-pill" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{manga.dataValues.title}}</h5>
+      <span class="badge rounded-pill bg-warning text-dark">{{manga.dataValues.genre}}</span>
+      <span class="badge rounded-pill bg-info text-dark"> {{manga.dataValues.language}}</span>
+      <span class="badge rounded-pill bg-dark"> {{manga.dataValues.publisher}}</span>
+      <span class="badge rounded-pill bg-secondary">Lançado em: {{publicationYear}}</span>
+      <p class="card-text"> {{manga.dataValues.description}}</p>
+      <hr>
+      <p>Autor: {{manga.dataValues.author}}</p>
+      <p class="card-text"><small class="text-muted">Status: {{manga.dataValues.status}}</small></p>
+      <p> 
+      <div id="btn-watch-back">
+        <a href="{{manga.dataValues.linkAnime}}" class="btn btn-read">Ler
+          <img src="/img/read.png" alt="ler">
+        </a>
+        <a href="/" class="btn btn-back">Voltar</a></p>
+      </div>
+      {{#if adminAcess}}
+        <div id="btn-admin" class="btn-manga-info-admin">
+          <a id="btn-edit" class="btn btn-danger btn-edit-info" href="/manga/edit/{{manga.dataValues.id}}"><img src="/img/edit-icon.png" alt=""></a>{{!-- redirecina pra rota get do put--}}
+          
+          <button id="btn-del-{{manga.dataValues.id}}" class="btn btn-danger btn-home btn-del btn-del-info" data-id="{{manga.dataValues.id}}"><img src="/img/delete-icon.png" alt=""></button>
+                
+        </div>
+                     
+            {{/if}}
+           
+     
+    </div>
+  </div>
+  
+</div>
+<script src="/js/fetchDeleteMangaInfo.js">
+
+</script>

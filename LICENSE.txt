@@ -1,0 +1,19 @@
+Licença de Visualização de Código
+
+Esta licença é concedida para permitir a visualização do código-fonte para fins de análise de habilidades. Ao aceitar esta licença, você concorda com os seguintes termos:
+
+Proibição de Uso: O código-fonte não pode ser utilizado para qualquer finalidade, incluindo, mas não se limitando a, execução, compilação ou integração em outros projetos.
+Proibição de Compartilhamento: O código-fonte não pode ser compartilhado, distribuído ou divulgado a terceiros sob nenhuma circunstância.
+Proibição de Modificação: Não é permitido modificar, alterar ou criar trabalhos derivados do código-fonte.
+Proibição de Uso Comercial: O código-fonte não pode ser utilizado para fins comerciais ou lucrativos.
+Permissão de Visualização: O código-fonte pode ser visualizado apenas para fins de análise de habilidades e aprendizado pessoal.
+
+Code Viewing License
+
+This license is granted to allow the viewing of the source code for skill analysis purposes. By accepting this license, you agree to the following terms:
+
+Prohibition of Use: The source code may not be used for any purpose, including but not limited to execution, compilation, or integration into other projects.
+Prohibition of Sharing: The source code may not be shared, distributed, or disclosed to third parties under any circumstances.
+Prohibition of Modification: Modification, alteration, or creation of derivative works from the source code is not permitted.
+Prohibition of Commercial Use: The source code may not be used for commercial or profit-making purposes.
+Viewing Permission: The source code may only be viewed for skill analysis and personal learning purposes.
