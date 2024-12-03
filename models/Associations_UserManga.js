@@ -4,7 +4,7 @@ const sequelize = require("../db/connection");
 Manga.belongsToMany(User, { through: "UserManga" });
 User.belongsToMany(Manga, { through: "UserManga" });
 sequelize
-  .sync({ alter: true }) //PODE TIRAR O {ALTER:TRUE} SE DER BO
+  .sync({ }) //PODE TIRAR O {ALTER:TRUE} SE DER BO
   .then(() => {
     console.log("Tabelas e associações criadas com sucesso");
   })

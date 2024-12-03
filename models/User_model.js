@@ -28,7 +28,7 @@ const User = sequelize.define(
     // Other model options go here
   }
 );
-User.sync({ alter: true })
+User.sync({})
   .then(() => {
     console.log("tabela de usuario");
   })

@@ -59,7 +59,7 @@ const Manga = sequelize.define("Manga", {
   },
 });
 
-Manga.sync({ alter: true })
+Manga.sync({ })
   .then(() => {
     console.log("tabela de manga criada com sucesso");
   })

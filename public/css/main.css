@@ -319,3 +319,34 @@ body {
   text-align: center;
   margin-bottom: 500px;
 }
+@media screen and (max-width: 750px){
+  .card{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1080px){
+  .card{
+    width: 80%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .card{
+    width: 98%;
+    font-size: 12px;
+  }
+  .btn-read, .btn-back {
+    padding: 3px 8px; /* Reduz o espaçamento interno */
+    font-size: 10px; /* Reduz o tamanho da fonte */
+  }
+
+  .btn-read img {
+    width: 16px; /* Reduz a largura da imagem */
+    height: 16px; /* Reduz a altura da imagem */
+  }
+  .btn-edit-info, .btn-del-info{
+    padding: 3px 8px; /* Reduz o espaçamento interno */
+    font-size: 10px;
+  }
+}
