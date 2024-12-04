@@ -327,17 +327,26 @@ body {
   }
 }
 
+
 @media screen and (max-width: 550px){
   .card{
     width: 98%;
     font-size: 12px;
   }
+ 
   .btn-read, .btn-back {
     padding: 3px 8px; /* Reduz o espaçamento interno */
     font-size: 10px; /* Reduz o tamanho da fonte */
   }
-
+  .div-btn-read-info a {
+    padding: 3px 8px !important;
+    font-size: 10px !important;
+}
   .btn-read img {
+    width: 16px; /* Reduz a largura da imagem */
+    height: 16px; /* Reduz a altura da imagem */
+  }
+  .btn-detail img{
     width: 16px; /* Reduz a largura da imagem */
     height: 16px; /* Reduz a altura da imagem */
   }
@@ -361,5 +370,47 @@ body {
     justify-content: center;
     margin-top: 60px;
     margin-bottom: 244px;
+  }
+}
+@media screen and (max-width: 182px) {
+  .card {
+    width: 100%; /* Ocupa toda a largura disponível */
+    font-size: 10px; /* Fonte muito pequena para tamanhos ultrapequenos */
+  }
+  .image-credit {
+    font-size: 5px; /* Reduz ainda mais para telas muito pequenas */
+  }
+  .btn-read, .btn-back {
+    padding: 2px 4px; /* Reduz ainda mais o espaçamento interno */
+    font-size: 8px; /* Fonte ainda menor */
+  }
+
+  .div-btn-read-info a {
+    padding: 2px 4px !important;
+    font-size: 8px !important;
+  }
+
+  .btn-read img, .btn-detail img {
+    width: 12px; /* Reduz a largura da imagem */
+    height: 12px; /* Reduz a altura da imagem */
+  }
+
+  .btn-edit-info, .btn-del-info {
+    padding: 2px 4px; /* Espaçamento mínimo para botões */
+    font-size: 8px;
+  }
+
+  .login-form-div {
+    width: 100%;
+    max-width: 150px; /* Ajuste máximo para telas extremamente pequenas */
+    margin: 5px 0; /* Mantém espaçamento */
+  }
+
+  .login-form {
+    width: 90%; /* Quase toda a largura disponível */
+    max-width: 150px; /* Ajuste proporcional */
+    margin: 0 auto; /* Centralizado */
+    margin-top: 20px; /* Ajuste o espaçamento superior */
+    margin-bottom: 60px; /* Ajuste o espaçamento inferior */
   }
 }
