@@ -319,7 +319,13 @@ body {
   text-align: center;
   margin-bottom: 500px;
 }
-
+#footer a {
+  text-decoration: none; /* Remove a linha sublinhada */
+  color:white; /* Define a cor roxa */
+}
+#footer a:hover {
+  color: darkviolet; /* Adiciona um efeito ao passar o mouse (opcional) */
+}
 @media screen and (max-width: 1080px){
   .card{
     width: 80%;
